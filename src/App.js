@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import ProductItem from './ProductItem';
 import AddProduct from './AddProduct';
+import Clock from './Clock';
+import Clock2 from './Clock2';
 
 const products = [
   {
@@ -51,11 +53,12 @@ class App extends Component {
 
   onAdd(name, price) {
     const products = this.getProducts();
-
-    products.push({
-      name,
-      price
-    });
+    if (products) {
+      products.push({
+        name,
+        price
+      });
+    }
 
     this.setState({ products });
   }
@@ -93,6 +96,8 @@ class App extends Component {
             />
           );
         })}
+        <Clock />
+        <Clock2 />
       </div>
     );
   }
