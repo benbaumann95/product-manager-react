@@ -4,6 +4,7 @@ import ProductItem from './ProductItem';
 import AddProduct from './AddProduct';
 import Clock from './Clock';
 import Clock2 from './Clock2';
+import Test1 from './Test1';
 
 const products = [
   {
@@ -98,6 +99,7 @@ class App extends Component {
         })}
         <Clock />
         <Clock2 />
+        <Test1 message={'hello mate'}> </Test1>
       </div>
     );
   }
